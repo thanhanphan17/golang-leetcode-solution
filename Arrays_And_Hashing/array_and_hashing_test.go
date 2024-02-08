@@ -22,3 +22,22 @@ func Test_217ContainsDuplicate(t *testing.T) {
 		}
 	}
 }
+
+func Test_242ValidAnagram(t *testing.T) {
+	testCases := []struct {
+		s        string
+		t        string
+		expected bool
+	}{
+		{s: "", t: "", expected: true},
+		{s: "anagram", t: "nagaram", expected: true},
+		{s: "rat", t: "car", expected: false},
+	}
+
+	for _, test := range testCases {
+		got := isAnagram(test.s, test.t)
+		if got != test.expected {
+			t.Errorf("For input %s and %s, expected %t, but got %t", test.s, test.t, test.expected, got)
+		}
+	}
+}
