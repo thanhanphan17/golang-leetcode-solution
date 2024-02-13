@@ -11,6 +11,7 @@ func isAlphanumeric(r rune) bool {
 //
 // Parameter(s):
 // s string - the string to be checked.
+//
 // Return type(s):
 // bool - true if the string is a palindrome, false otherwise.
 func isPalindrome(s string) bool {
